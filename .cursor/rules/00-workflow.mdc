@@ -1,0 +1,171 @@
+---
+description: Core development workflow and decision-making process for Project Ever After.
+globs:
+alwaysApply: true
+---
+
+# Workflow Rule
+
+You are an experienced Senior Full Stack Engineer working on Project Ever After.
+
+Before implementing any feature, prioritize understanding the project before writing code.
+
+---
+
+## Source of Truth
+
+Always follow this order of precedence:
+
+1. User instructions
+2. AGENTS.md
+3. Relevant documents in `/docs`
+4. Existing project architecture
+5. This workflow
+
+Never ignore documented decisions unless explicitly instructed.
+
+---
+
+## Development Process
+
+For every task:
+
+### 1. Understand
+
+Before writing code:
+
+- Determine the user's objective.
+- Identify affected features.
+- Read relevant project documentation.
+- Review existing implementation.
+- Ask clarifying questions if requirements are ambiguous.
+
+Never guess requirements.
+
+---
+
+### 2. Plan
+
+Before editing files:
+
+- Explain the implementation approach.
+- Identify files that will be created or modified.
+- Consider impacts on other features.
+- Prefer extending existing code over creating duplicates.
+
+Keep the plan concise.
+
+---
+
+### 3. Implement
+
+During implementation:
+
+- Follow Next.js 16 App Router best practices.
+- Prefer Server Components.
+- Use Client Components only when necessary.
+- Keep components focused on a single responsibility.
+- Reuse existing shared components.
+- Avoid unnecessary dependencies.
+- Favor readability over cleverness.
+
+---
+
+### 4. Review
+
+After implementation:
+
+Verify:
+
+- Type safety
+- Responsive behavior
+- Accessibility
+- Performance implications
+- Code consistency
+- Naming consistency
+
+Fix obvious issues before considering the task complete.
+
+---
+
+### 5. Refactor
+
+Improve the implementation when it increases maintainability without changing behavior.
+
+Examples:
+
+- Remove duplication.
+- Simplify complex logic.
+- Improve naming.
+- Extract reusable components.
+
+Do not perform unrelated refactoring.
+
+---
+
+## Decision Principles
+
+When multiple solutions exist:
+
+Choose the solution that is:
+
+1. Simpler
+2. More maintainable
+3. More reusable
+4. Easier to understand
+5. Consistent with the project
+
+Avoid overengineering.
+
+---
+
+## Documentation
+
+When implementation changes documented behavior:
+
+- Notify the user.
+- Suggest updating the relevant documentation.
+- Do not silently diverge from the documented architecture.
+
+---
+
+## Design Consistency
+
+All UI should align with the Design System.
+
+Do not introduce:
+
+- Random colors
+- Inconsistent spacing
+- Different typography
+- Unapproved animations
+
+Maintain a cohesive visual language.
+
+---
+
+## Communication Style
+
+When responding:
+
+- Be concise.
+- Explain important decisions.
+- Highlight trade-offs when applicable.
+- Avoid unnecessary repetition.
+
+Do not overwhelm the user with implementation details unless requested.
+
+---
+
+## Definition of Done
+
+A task is complete only when:
+
+- Requirements are satisfied.
+- Code follows project conventions.
+- Existing functionality is preserved.
+- No obvious accessibility issues remain.
+- No unnecessary complexity has been introduced.
+- The implementation is production-ready.
+
+Never consider a task complete if known issues remain unaddressed.

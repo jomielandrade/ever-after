@@ -1,0 +1,260 @@
+---
+description: TypeScript and coding standards for Project Ever After.
+globs:
+  - "**/*.ts"
+  - "**/*.tsx"
+alwaysApply: true
+---
+
+# Coding Standards
+
+These standards define how code should be written throughout the project.
+
+Always prioritize readability, consistency, maintainability, and simplicity.
+
+---
+
+# General Principles
+
+Write code that another developer can understand quickly.
+
+Prefer:
+
+- Simple
+- Explicit
+- Predictable
+- Reusable
+
+Avoid:
+
+- Clever code
+- Premature optimization
+- Deep nesting
+- Unnecessary abstraction
+
+---
+
+# TypeScript
+
+Always use TypeScript.
+
+Do not use:
+
+- any
+- @ts-ignore
+- type assertions unless absolutely necessary
+
+Prefer inference when obvious.
+
+Create explicit interfaces when data is shared across components.
+
+---
+
+# Naming
+
+Use clear, descriptive names.
+
+Examples:
+
+Component
+
+InvitationCard
+
+Hook
+
+useCountdown
+
+Utility
+
+formatWeddingDate
+
+Constant
+
+MAX_GUESTS
+
+Boolean
+
+isOpen
+
+hasResponded
+
+canSubmit
+
+Avoid abbreviations unless universally understood.
+
+---
+
+# Components
+
+Each component should have a single responsibility.
+
+Prefer:
+
+One component
+One purpose
+
+If a component exceeds roughly 200 lines, consider splitting it into smaller components.
+
+---
+
+# Props
+
+Use interfaces for component props.
+
+Example:
+
+interface InvitationCardProps {
+  title: string;
+  subtitle?: string;
+}
+
+Keep props minimal.
+
+Avoid prop drilling when a better composition exists.
+
+---
+
+# Functions
+
+Functions should:
+
+- Do one thing.
+- Have descriptive names.
+- Return early when possible.
+- Avoid deeply nested conditions.
+
+Prefer small helper functions over long functions.
+
+---
+
+# Imports
+
+Group imports in this order:
+
+1. React / Next.js
+2. Third-party packages
+3. Internal aliases
+4. Relative imports
+
+Remove unused imports.
+
+Prefer project aliases over long relative paths when configured.
+
+---
+
+# File Organization
+
+Within a file, organize in this order:
+
+1. Imports
+2. Types / Interfaces
+3. Constants
+4. Component
+5. Helper functions (if private)
+
+---
+
+# Comments
+
+Code should be self-explanatory.
+
+Only write comments when explaining:
+
+- Why something exists.
+- Business rules.
+- Non-obvious decisions.
+
+Avoid comments that describe what the code already says.
+
+---
+
+# Error Handling
+
+Never silently ignore errors.
+
+Provide meaningful error messages.
+
+Fail gracefully.
+
+---
+
+# Constants
+
+Avoid magic numbers and hard-coded strings.
+
+Extract reusable values into constants.
+
+Example:
+
+const RSVP_DEADLINE = ...
+
+---
+
+# Duplication
+
+Before writing new code:
+
+Search for an existing implementation.
+
+Prefer:
+
+Reuse
+
+over
+
+Rewrite.
+
+---
+
+# Accessibility
+
+Do not sacrifice accessibility for convenience.
+
+Semantic HTML is preferred over div-based layouts.
+
+---
+
+# Responsive Design
+
+All UI must work on:
+
+- Mobile
+- Tablet
+- Desktop
+
+Use mobile-first development.
+
+---
+
+# Performance
+
+Avoid unnecessary:
+
+- Re-renders
+- State
+- Effects
+
+Keep components as lightweight as possible.
+
+---
+
+# Git Hygiene
+
+Generate focused changes.
+
+Do not modify unrelated files.
+
+Do not introduce unrelated refactors while implementing a feature.
+
+---
+
+# Definition of Done
+
+Code is complete when it is:
+
+- Readable
+- Typed
+- Reusable
+- Responsive
+- Accessible
+- Production-ready

@@ -1,0 +1,189 @@
+---
+description: Frontend implementation standards for Next.js 16, React 19, and Project Ever After.
+globs:
+  - "app/**/*"
+  - "components/**/*"
+  - "features/**/*"
+alwaysApply: true
+---
+
+# Frontend Standards
+
+This project is built with:
+
+- Next.js 16 App Router
+- React 19
+- TypeScript
+- Tailwind CSS v4
+
+Always follow modern Next.js best practices.
+
+---
+
+# Architecture
+
+Respect the project architecture documented in:
+
+- AGENTS.md
+- docs/03-technical-architecture.md
+
+Do not invent a different project structure.
+
+Feature-specific code belongs inside `/features`.
+
+Only reusable UI belongs inside `/components`.
+
+---
+
+# Server Components First
+
+Default to Server Components.
+
+Only add:
+
+```tsx
+"use client";
+```
+
+when the component requires:
+
+- React hooks
+- Browser APIs
+- Event handlers
+- Client-side state
+- Animations that require JavaScript
+
+Never add `"use client"` unnecessarily.
+
+---
+
+# Component Design
+
+Components should:
+
+- Have a single responsibility.
+- Be small and composable.
+- Prefer composition over inheritance.
+- Avoid deeply nested JSX.
+
+When a component becomes difficult to understand, split it into smaller components.
+
+---
+
+# Data Fetching
+
+Prefer:
+
+- Server Components
+- Async server functions
+
+Avoid unnecessary client-side fetching.
+
+---
+
+# Routing
+
+Use the Next.js App Router.
+
+Organize routes using route groups when appropriate.
+
+Avoid unnecessary nested layouts.
+
+---
+
+# Forms
+
+When forms are introduced:
+
+- Use React Hook Form.
+- Use Zod for validation.
+- Display clear validation messages.
+- Validate on both client and server when applicable.
+
+---
+
+# State Management
+
+Prefer this order:
+
+1. Server Components
+2. Local React state
+3. URL state
+4. Context (only when necessary)
+
+Do not introduce external global state libraries unless approved.
+
+---
+
+# Styling
+
+Use:
+
+- Tailwind CSS utilities
+- Design tokens
+- Shared UI components
+
+Avoid:
+
+- Inline styles
+- Custom CSS unless necessary
+- Duplicate utility combinations across components
+
+---
+
+# Images
+
+Use the Next.js Image component whenever possible.
+
+Provide meaningful alt text.
+
+Optimize image sizes.
+
+Lazy-load non-critical images.
+
+---
+
+# Performance
+
+Prefer:
+
+- Static rendering
+- Server rendering
+- Lazy loading
+- Dynamic imports when beneficial
+
+Avoid unnecessary JavaScript.
+
+---
+
+# Error Handling
+
+Handle errors gracefully.
+
+Display user-friendly messages.
+
+Never expose internal errors to users.
+
+---
+
+# Code Generation Principles
+
+Before creating a new component:
+
+- Search for an existing reusable component.
+- Reuse before creating.
+- Extend before duplicating.
+
+Avoid duplicate implementations.
+
+---
+
+# Definition of Done
+
+Frontend work is complete when:
+
+- It follows the documented architecture.
+- It is responsive.
+- It is type-safe.
+- It is accessible.
+- It is production-ready.

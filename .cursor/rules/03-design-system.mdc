@@ -1,0 +1,226 @@
+---
+description: Apply the Project Ever After design language and visual identity.
+globs:
+  - "app/**/*.tsx"
+  - "components/**/*.tsx"
+  - "features/**/*.tsx"
+alwaysApply: true
+---
+
+# Design System
+
+Follow the visual identity documented in:
+
+- docs/02-design-system.md
+
+Do not invent a different visual style.
+
+---
+
+# Design Philosophy
+
+Every interface should communicate:
+
+- Quiet luxury
+- Timeless elegance
+- Warmth
+- Editorial minimalism
+- Romance
+- Spaciousness
+
+Every design decision should support these principles.
+
+---
+
+# Layout
+
+Prefer:
+
+- Large whitespace
+- Clear visual hierarchy
+- Balanced composition
+- Comfortable reading width
+- Generous vertical spacing
+
+Avoid:
+
+- Crowded layouts
+- Small touch targets
+- Unnecessary decorative elements
+
+---
+
+# Typography
+
+Respect the project's typography system.
+
+Use typography to establish hierarchy rather than changing colors or adding excessive decoration.
+
+Avoid:
+
+- Too many font sizes
+- Inconsistent font weights
+- Decorative fonts outside their intended purpose
+
+---
+
+# Colors
+
+Only use colors defined in the Design System.
+
+Do not introduce random colors.
+
+Do not use default Tailwind colors unless they are mapped to project design tokens.
+
+---
+
+# Components
+
+Components should feel:
+
+- Elegant
+- Spacious
+- Consistent
+- Minimal
+
+Avoid overly busy UI.
+
+Reuse existing components whenever possible.
+
+---
+
+# Buttons
+
+Buttons should have:
+
+- Clear hierarchy
+- Consistent sizing
+- Accessible contrast
+- Comfortable padding
+
+Primary actions should always be visually obvious.
+
+---
+
+# Cards
+
+Cards should emphasize content rather than decoration.
+
+Prefer:
+
+- Soft borders
+- Rounded corners
+- Generous padding
+- Minimal shadow
+
+Avoid heavy borders and exaggerated elevation.
+
+---
+
+# Icons
+
+Use simple outline icons.
+
+Icons should support content rather than become decorative elements.
+
+Keep icon sizing consistent throughout the project.
+
+---
+
+# Motion
+
+Animations should feel:
+
+- Calm
+- Smooth
+- Intentional
+- Premium
+
+Prefer:
+
+- Fade
+- Gentle slide
+- Soft scale
+
+Avoid:
+
+- Bounce
+- Spin
+- Flash
+- Elastic effects
+- Distracting motion
+
+Motion should enhance the experience, not compete with it.
+
+---
+
+# Images
+
+Images should appear:
+
+- Bright
+- Natural
+- Authentic
+- Editorial
+
+Prefer large, immersive imagery.
+
+Always preserve image quality.
+
+Use the Next.js Image component where appropriate.
+
+---
+
+# Responsive Design
+
+Design mobile-first.
+
+Layouts should adapt gracefully across:
+
+- Mobile
+- Tablet
+- Desktop
+
+Never sacrifice usability for aesthetics.
+
+---
+
+# Consistency
+
+Maintain consistency across:
+
+- Colors
+- Typography
+- Spacing
+- Border radius
+- Iconography
+- Motion
+- Component behavior
+
+Do not introduce one-off styles.
+
+---
+
+# User Experience
+
+Every screen should answer:
+
+"What is the next action for the user?"
+
+Guide users naturally through the wedding story.
+
+Avoid unnecessary friction.
+
+---
+
+# Final Check
+
+Before completing UI work, verify:
+
+- Matches the documented Design System
+- Feels cohesive with the rest of the application
+- Uses consistent spacing
+- Uses consistent typography
+- Uses approved colors
+- Uses calm, refined motion
+- Delivers a premium experience

@@ -1,0 +1,206 @@
+---
+description: Accessibility standards for Project Ever After.
+globs:
+  - "app/**/*.tsx"
+  - "components/**/*.tsx"
+  - "features/**/*.tsx"
+alwaysApply: true
+---
+
+# Accessibility
+
+Accessibility is a core quality requirement.
+
+Every feature should be usable by as many people as possible without requiring separate implementations.
+
+---
+
+# Semantic HTML
+
+Always prefer semantic HTML.
+
+Use:
+
+- header
+- main
+- nav
+- section
+- article
+- footer
+- button
+- form
+- label
+
+Avoid replacing semantic elements with generic divs unless necessary.
+
+---
+
+# Keyboard Navigation
+
+All interactive elements must be reachable using the keyboard.
+
+Users should be able to:
+
+- Tab through controls
+- Activate buttons using Enter or Space
+- Close dialogs using Escape when appropriate
+
+Do not create keyboard traps.
+
+---
+
+# Focus States
+
+Interactive elements must have visible focus indicators.
+
+Never remove focus outlines without providing an accessible alternative.
+
+Focus should always remain visible.
+
+---
+
+# Forms
+
+Every form control must have:
+
+- A visible label
+- Appropriate placeholder text when helpful
+- Validation feedback
+- Helpful error messages
+
+Errors should explain how users can resolve the issue.
+
+Do not rely solely on color to communicate errors.
+
+---
+
+# Images
+
+Every meaningful image must include descriptive alt text.
+
+Decorative images should use:
+
+alt=""
+
+Do not leave alt text undefined.
+
+---
+
+# Buttons
+
+Buttons should clearly describe their action.
+
+Prefer:
+
+"Submit RSVP"
+
+Instead of:
+
+"Click Here"
+
+Avoid ambiguous labels.
+
+---
+
+# Links
+
+Link text should describe the destination.
+
+Avoid:
+
+"Read More"
+
+Prefer:
+
+"View Wedding Timeline"
+
+---
+
+# Color Contrast
+
+Maintain sufficient contrast between text and background.
+
+Never rely on color alone to communicate meaning.
+
+---
+
+# Motion
+
+Respect the user's reduced motion preference.
+
+Animations should:
+
+- Enhance the experience
+- Never block interaction
+- Never trigger unexpected movement
+
+Provide reduced-motion alternatives where applicable.
+
+---
+
+# Responsive Accessibility
+
+Ensure usability across:
+
+- Mobile
+- Tablet
+- Desktop
+
+Touch targets should be comfortably tappable.
+
+Avoid placing interactive elements too close together.
+
+---
+
+# Screen Readers
+
+Use accessible names for interactive elements.
+
+When appropriate, provide:
+
+- aria-label
+- aria-labelledby
+- aria-describedby
+
+Only use ARIA when native HTML semantics are insufficient.
+
+Prefer native HTML whenever possible.
+
+---
+
+# Loading States
+
+Communicate loading clearly.
+
+Disable actions that cannot be performed during loading.
+
+Avoid layouts that shift unexpectedly.
+
+---
+
+# Error Handling
+
+Error messages should:
+
+- Explain what happened
+- Explain how to fix it
+- Be understandable by non-technical users
+
+Never expose internal implementation details.
+
+---
+
+# Testing Checklist
+
+Before completing UI work, verify:
+
+- Keyboard navigation works.
+- Focus is always visible.
+- Forms have labels.
+- Images have appropriate alt text.
+- Color contrast is sufficient.
+- Interactive elements are reachable.
+- Reduced motion is respected.
+- Responsive layouts remain usable.
+
+Accessibility issues should be resolved before considering a feature complete.
