@@ -72,10 +72,10 @@
   --secondary-foreground: var(--charcoal);
   --muted: var(--soft-gray);
   --muted-foreground: var(--muted-taupe);
-  /* --accent: var(--sage-green);
-  --accent-foreground: var(--charcoal); */
+  /* --accent: var(--sage-green); */
+  --accent-foreground: var(--charcoal);
   --accent: var(--champagne-gold);
-  --accent-foreground: var(--white);
+  /* --accent-foreground: var(--white); */
   --destructive: oklch(0.577 0.245 27.325);
   --border: var(--soft-gray);
   --input: var(--soft-gray);
@@ -136,10 +136,73 @@
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
+
   html {
     @apply font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      @apply scroll-smooth;
+    }
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans text-base font-normal leading-relaxed;
+  }
+
+  ::selection {
+    @apply bg-primary/20 text-foreground;
+  }
+
+  a {
+    @apply text-primary underline-offset-4 transition-opacity duration-300;
+  }
+
+  a:hover {
+    @apply underline opacity-80;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring/50 ring-offset-2 ring-offset-background;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-normal tracking-tight text-foreground;
+  }
+
+  h1 {
+    @apply text-3xl leading-tight md:text-4xl lg:text-5xl;
+  }
+
+  h2 {
+    @apply text-2xl leading-tight md:text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    @apply text-xl leading-snug md:text-2xl lg:text-3xl;
+  }
+
+  h4 {
+    @apply text-lg leading-snug md:text-xl;
+  }
+
+  h5 {
+    @apply text-base leading-normal md:text-lg;
+  }
+
+  h6 {
+    @apply text-sm leading-normal md:text-base;
+  }
+
+  p {
+    @apply text-base leading-relaxed text-foreground;
   }
 }
