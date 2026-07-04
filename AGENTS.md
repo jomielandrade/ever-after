@@ -327,6 +327,20 @@ Never implement features that contradict the documented specifications.
 
 ---
 
+## Standard Workflow
+
+Before implementing any prompt:
+
+1. Read the referenced prompt file.
+2. Treat the prompt as the implementation specification.
+3. Follow all Cursor rules.
+4. Explain the implementation plan.
+5. Modify only the allowed files.
+6. Verify the acceptance criteria.
+7. Stop at the defined stop condition.
+
+---
+
 # Guiding Principle
 
 When multiple solutions are technically correct, choose the one that results in the simplest, most elegant, and most maintainable implementation while preserving the premium user experience.

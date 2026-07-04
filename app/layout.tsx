@@ -31,10 +31,33 @@ const greatVibes = Great_Vibes({
   variable: "--font-script",
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "http://localhost:3000");
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Project Ever After",
   description:
-    "A luxury interactive wedding invitation celebrating the love story of Jomiel and Rojiely.",
+    "A timeless digital wedding invitation celebrating the love story of Jomiel and Rojiely.",
+  applicationName: "Project Ever After",
+  keywords: [
+    "Rojiely",
+    "Jomiel",
+    "Project Ever After",
+    "digital wedding invitation",
+    "Philippines wedding",
+    "July 15 2026 wedding",
+  ],
+  authors: [{ name: "Rojiely" }, { name: "Jomiel" }],
+  creator: "Jomiel & Rojiely",
+  publisher: "Project Ever After",
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -53,7 +76,10 @@ export default function RootLayout({
         greatVibes.variable,
       )}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {/* Future providers (Theme, Audio, RSVP) wrap children here */}
+        {children}
+      </body>
     </html>
   );
 }
