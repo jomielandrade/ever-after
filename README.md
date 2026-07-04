@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💍 Project Ever After
 
-## Getting Started
+> A luxury, interactive wedding invitation built with Next.js 16, React 19, Tailwind CSS v4, and Supabase.
 
-First, run the development server:
+Project Ever After is a modern web application designed to transform a traditional wedding invitation into a cinematic, story-driven digital experience. Rather than presenting information on a single page, guests are guided through a carefully crafted journey—from opening a virtual invitation to learning our story, viewing wedding details, and confirming their attendance through an elegant RSVP experience.
+
+This project is built as a production-quality web application with a strong focus on user experience, accessibility, performance, and maintainability.
+
+---
+
+## ✨ Features
+
+### Storytelling Experience
+
+* Interactive invitation opening
+* Story chapters
+* Timeline of our journey
+* Memory gallery
+* Proposal highlights
+
+### Wedding Information
+
+* Ceremony details
+* Reception details
+* Interactive maps
+* Frequently Asked Questions
+* Principal Sponsors
+
+### RSVP System
+
+* Guest confirmation
+* Guest count
+* Song requests
+* Messages and well wishes
+* Admin management
+
+### Technical Features
+
+* Mobile-first responsive design
+* Accessibility-first implementation
+* Smooth Framer Motion animations
+* Server Components with Next.js App Router
+* Supabase backend
+* Optimized images and performance
+* SEO-friendly metadata
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+
+* Next.js 16
+* React 19
+* TypeScript
+* Tailwind CSS v4
+* Framer Motion
+
+### UI
+
+* shadcn/ui
+* Custom Design System
+
+### Backend
+
+* Supabase
+* PostgreSQL
+
+### Forms
+
+* React Hook Form
+* Zod
+
+### Deployment
+
+* Vercel
+
+---
+
+## 📁 Project Structure
+
+```text
+app/
+components/
+features/
+hooks/
+lib/
+types/
+docs/
+prompts/
+.cursor/
+public/
+```
+
+---
+
+## 🚀 Getting Started
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🤖 AI-Assisted Development
 
-To learn more about Next.js, take a look at the following resources:
+This project is developed using a specification-first workflow.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Documentation is separated into multiple layers:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* `AGENTS.md` — Instructions for AI coding agents.
+* `docs/` — Product and technical documentation.
+* `.cursor/rules/` — Cursor-specific development rules.
+* `prompts/` — Feature implementation specifications.
 
-## Deploy on Vercel
+This structure ensures AI-generated code remains consistent, maintainable, and aligned with the project's architecture.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📚 Documentation
+
+The `docs/` directory contains the project's specifications, including architecture, design system, content, and database design.
+
+---
+
+## 📄 License
+
+This project is currently private and intended for personal use.
