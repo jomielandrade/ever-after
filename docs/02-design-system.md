@@ -370,6 +370,31 @@ The final experience should feel original rather than directly imitating any sin
 
 ---
 
+## Motion Tokens
+
+### Durations
+
+- Fast — 0.2s
+- Standard — 0.4s
+- Elegant — 0.6s
+- Slow — 0.8s
+
+### Distances
+
+- Small — 8px
+- Medium — 16px
+- Large — 24px
+
+### Principles
+
+- Motion should guide attention.
+- Motion should never delay interaction.
+- Motion should respect prefers-reduced-motion.
+- Favor opacity and gentle movement.
+- Avoid bounce, elastic effects, and excessive rotation.
+
+---
+
 # Acceptance Criteria
 
 The design system is complete when:
