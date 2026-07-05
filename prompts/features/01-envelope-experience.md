@@ -123,6 +123,18 @@ Do NOT:
 
 ---
 
+# Visual Direction
+
+The envelope should be created entirely with HTML, CSS, and the existing design system.
+
+Do not use raster images.
+
+Do not use external SVG assets.
+
+Keep the implementation lightweight, scalable, and theme-aware.
+
+---
+
 # Acceptance Criteria
 
 The implementation is complete when:
@@ -132,6 +144,7 @@ The implementation is complete when:
 * Shared motion components are reused.
 * The opening interaction completes successfully.
 * The component remains reusable.
+* A controlled state
 
 ---
 
